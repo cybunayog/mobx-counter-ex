@@ -8,26 +8,10 @@ function HomeScreen() {
   return (
     <View style={styles.container}>
 
-      {/* 
-        Making a text 
-        "count" = var
-        
-        Decrement/Increment button
-        decrement = count goes down
-        increment = count goes up
-
-        Connect it to MobX
-        count persists
-
-        Create a store
-
-      */}
-
       <Text style={styles.text}>Bootleg counting! :3</Text>
       <TouchableOpacity style={styles.leftButton} onPress={()=> RootStore.CounterStore.incrementCountValue()}><Text style={styles.text}>+</Text></TouchableOpacity>
       <TouchableOpacity style={styles.rightButton} onPress={()=> RootStore.CounterStore.decrementCountValue()}><Text style={styles.text}>-</Text></TouchableOpacity>
       <Text style={styles.text}>{RootStore.CounterStore.myCountValue}</Text>
-
 
     </View>
   );
